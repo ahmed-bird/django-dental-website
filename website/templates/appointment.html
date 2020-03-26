@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_description %}Setting an Appointment{% endblock %}
+
+{% block title %}Set an Appointment to See Dr. Atbir{% endblock %}
+
+{% block content %}
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Appointment</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Set Appointment</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+  <center>
+  	<div class="container">
+  	  <table class="table table-hover">
+		<thead align="center">
+		  <tr>
+		    <th scope="col" colspan="2"><h3>Review Your Information:</h3></th>
+		  </tr>
+		</thead>
+		<tbody align="center">
+		  <tr>
+		    <th scope="row">Your Name</th>
+		    <td>{{ your_name }}</td>
+		  </tr>
+		  <tr>
+		    <th scope="row">Your Phone</th>
+		    <td>{{ your_phone }}</td>
+		  </tr>
+		  <tr>
+		    <th scope="row">Your Email</th>
+		    <td>{{ your_email }}</td>
+		  </tr>
+		  <tr>
+		    <th scope="row">Your Address</th>
+		    <td>{{ your_address }}</td>
+		  </tr>
+		  <tr>
+		    <th scope="row">Your Schedule</th>
+		    <td>{{ your_schedule }}</td>
+		  </tr>
+		  <tr>
+		    <th scope="row">Appointment Date</th>
+		    <td>{{ your_date }}</td>
+		  </tr>
+		  <tr>
+		    <th scope="row">Your Massage</th>
+		    <td>{{ your_message }}</td>
+		  </tr>
+		</tbody>
+	  </table>
+
+	  <br><br>
+
+	  <div class="alert alert-info alert-dismissible fade show" role="alert">
+	  	<strong>Note!</strong> This appointment hasn't been set yet. We will contact you shortly via telephone to confirm your appointment.
+	  	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	  	  <span aria-hidden="true">&times;</span>
+	  	</button>
+	  </div>
+
+	  <br><br><br>
+  	</div>
+  </center>
+{% endblock %}
